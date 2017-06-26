@@ -22,8 +22,10 @@ Usage:
 ```
 <link href=".../imageviewer.css" rel="stylesheet">
 <script src=".../imageviewer.min.js"></script>
-$(".img-responsive").css("cursor","pointer").on('click',function(){
-  var imgSrc = this.src;
-  ImageViewer().show(imgSrc);
-});
+<script>
+  $(".img-responsive").css("cursor","pointer").on('click',function(){
+    var imgSrc = this.src;
+    ImageViewer().show(imgSrc);
+  });
+</script>
 ```
