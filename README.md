@@ -1,17 +1,29 @@
-# ImageViewer
+# ImageViewer - modified
 A zooming and panning plugin inspired by google photos for your web images.
 
-##Features
-<ul>
-    <li>Smooth dragging and panning images.</li>
-    <li>Support touch devices.</li>
-    <li>Double tap to zoom in/zoom out.</li>
-    <li>Pinch in / pinch out to zoom in/out.</li>
-    <li>Snap view for easier panning and zooming experience.</li>
-    <li>Allow quick display of loaded image then loading high resolution image asynchronously.</li>
-    <li>Exposed API to control zoom programmatically.</li>
-</ul>
+Original version [here](https://github.com/s-yadav/ImageViewer).
 
-Check http://ignitersworld.com/lab/imageViewer.html  for demo and documentation .
+Fetures of this modified version:
 
-![alt tag](imageviewer.jpg)
+* zoom in/out
+* free dragging image
+* only full screen mode
+* support touch device
+* no snap view
+* `arrow up/down/left/right` to control image to move
+* `+/-` to zoom in/out image
+* `alt/ctrl` for fine-tuning/Coarse-tuning
+* `esc` to quit the view mode
+
+Visit my [blog](https://nifume.com) to check the example.
+
+Usage:
+
+```
+<link href=".../imageviewer.css" rel="stylesheet">
+<script src=".../imageviewer.min.js"></script>
+$(".img-responsive").css("cursor","pointer").on('click',function(){
+  var imgSrc = this.src;
+  ImageViewer().show(imgSrc);
+});
+```
